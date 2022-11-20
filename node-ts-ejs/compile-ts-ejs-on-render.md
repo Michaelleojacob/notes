@@ -24,7 +24,7 @@ But it only targets `.ts` files.
 
 file structure:
 
-![file structure](../images/file-structure.png)
+![file structure](../images/exp-ts-prisma-elephantsql.png)
 
 Several options when attempting to deploy the `./dist` folder:
 
