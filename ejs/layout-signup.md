@@ -2,6 +2,13 @@ file structure:
 
 ![file structure](../images/ejs-layout-signup.png)
 
+ejs node boilerplate:
+
+```js
+app.set("views", path.join(__dirname, "/views"));
+app.set("view engine", "ejs");
+```
+
 ```js
 // layout.html
 <!DOCTYPE html>
