@@ -1,15 +1,21 @@
-deploying a node+express app using prisma (postgresql).
-Postgres hosted on elephantsql.
-Node+express hosted on render.
+features:
+
+- deploying a node+express app using prisma (postgresql).
+
+- Postgres hosted on elephantsql.
+
+- Node+express hosted on render.
 
 practice app: https://github.com/Michaelleojacob/testing-elephantsql
+
+## issues faced while deploying to the practice app to render:
 
 ### compiling ts
 
 run command `tsc` in the terminal
 
-```js
-tsc;
+```
+tsc
 ```
 
 `tsc` will compile typescript into a `./dist` folder.
@@ -40,13 +46,13 @@ app.set("view engine", "ejs");
 
 ---
 
-on render -> building views in `./dist` :
+on render -> building views in `./dist`
 
 this will copy the view and throw it in `./dist`.
 
-```js
+```
 // on render.com -> build command:
-`tsc && cp -r views/ dist/`;
+`tsc && cp -r views/ dist/`
 ```
 
 ```js
