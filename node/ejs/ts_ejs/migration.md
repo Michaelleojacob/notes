@@ -1,3 +1,13 @@
+## key points
+
+- don't forget to migrate
+  <br>
+  <br>
+- if `npx prisma migrate dev --name init` throws and error
+- use `npx prisma db push --preview-feature`
+
+---
+
 if `npx prisma migrate dev --name init` fails with error:
 
 ```js

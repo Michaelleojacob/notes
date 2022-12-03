@@ -1,3 +1,7 @@
+## key points
+
+- parse json middleware
+
 ```js
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

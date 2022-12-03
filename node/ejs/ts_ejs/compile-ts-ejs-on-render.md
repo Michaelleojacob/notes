@@ -1,4 +1,4 @@
-features:
+## key points
 
 - deploying a node+express app using prisma (postgresql).
 
@@ -30,7 +30,7 @@ But it only targets `.ts` files.
 
 file structure:
 
-![file structure](../images/exp-ts-prisma-elephantsql.png)
+![file structure](../../../images/exp-ts-prisma-elephantsql.png)
 
 Several options when attempting to deploy the `./dist` folder:
 

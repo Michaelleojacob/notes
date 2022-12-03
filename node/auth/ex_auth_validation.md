@@ -1,10 +1,64 @@
-quick example showing how to separate validation code into another file.
+## key points
 
-https://stackoverflow.com/questions/55772477/how-to-implement-validation-in-a-separate-file-using-express-validator
+- minimalistic boilerplate example of auth using express with express validation.
+  <br>
+  <br>
+
+## tech
+
+- typescript
+- express
+- prisma
+- bcrypt
+- express validation
+
+## files with examples:
+
+- app.js (entry point)
+- routes/
+- validation/
+
+app:
+
+```ts
+// app.ts
+import { PrismaClient } from "@prisma/client";
+import express from "express";
+const port = process.env.PORT || 3003;
+
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+const prisma = new PrismaClient();
+
+import signupRouter from "./routes/auth/signup";
+import signinRouter from "./routes/auth/signin";
+app.use("/signup", signupRouter);
+app.use("/signin", signinRouter);
+
+app.listen(port, () => {
+  console.log(`server running on port ${port}`);
+});
+```
+
+routes/signup:
 
 ```ts
 // routes/signup.ts
+import express from "express";
+import { Request, Response } from "express";
+import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcrypt";
 import validateSignUp from "../../validations/signup";
+
+const signupRouter = express.Router();
+const prisma = new PrismaClient();
+
+signupRouter.get("/", (req: Request, res: Response) => {
+  return res.json({ info: "this is the signup page" });
+});
 
 signupRouter.post("/", validateSignUp, async (req: Request, res: Response) => {
   const saltRounds = 10;
@@ -18,7 +72,11 @@ signupRouter.post("/", validateSignUp, async (req: Request, res: Response) => {
   });
   return res.status(400).json({ info: `user ${user.username} created` });
 });
+
+export default signupRouter;
 ```
+
+validation/signup:
 
 ```ts
 // validation/signup.ts

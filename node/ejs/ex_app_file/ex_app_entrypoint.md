@@ -1,3 +1,10 @@
+## key points
+
+- app (entry point) boilerplate
+- typescript
+- ejs
+- prisma
+
 ```js
 import { PrismaClient } from "@prisma/client";
 import express from "express";

@@ -1,8 +1,12 @@
-deploying a node+express app using prisma (postgresql).
-Postgres hosted on elephantsql.
-Node+express hosted on render.
+## key points
+
+- deploying a node+express app using prisma (postgresql).
+- Postgres hosted on elephantsql.
+- Node+express hosted on render.
 
 practice app: https://github.com/Michaelleojacob/testing-elephantsql
+
+---
 
 ### using prisma
 

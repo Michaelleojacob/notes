@@ -1,3 +1,8 @@
+## key points
+
+- notes for deploying to render.
+- small things have to change from dev to production.
+
 typescript's `tsc` command will only 'build' `.ts` files.
 
 which is fine for a RESTFUL api app.
