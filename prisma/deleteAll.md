@@ -1,4 +1,4 @@
-## key notes
+## key points
 
 - delete all users example
 
