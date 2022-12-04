@@ -2,6 +2,8 @@
 
 - delete all users example
 
+---
+
 ```js
 // to delete all users:
 async function deleteAllUsers() {

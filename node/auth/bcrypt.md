@@ -18,7 +18,9 @@
 - routes/
 - validation/
 
-app:
+---
+
+## app
 
 ```ts
 // app.ts
@@ -43,7 +45,9 @@ app.listen(port, () => {
 });
 ```
 
-routes/signup:
+---
+
+## routes/signup
 
 ```ts
 // routes/signup.ts
@@ -76,7 +80,13 @@ signupRouter.post("/", validateSignUp, async (req: Request, res: Response) => {
 export default signupRouter;
 ```
 
-validation/signup:
+---
+
+## validation/signup
+
+- bcrypt
+- validation
+- TODO: separate out the validation code
 
 ```ts
 // validation/signup.ts

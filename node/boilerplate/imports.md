@@ -5,10 +5,14 @@
 - how to use imports (middleware)
 - exports
 
+---
+
 ```js
 // in package.json !! unless using ts !!
 "type": "module",
 ```
+
+---
 
 ## imports
 

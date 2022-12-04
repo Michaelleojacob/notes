@@ -1,16 +1,34 @@
 ## key points
 
-- deploying a node+express app using prisma (postgresql).
+- small differences between local and production enviroments (pre/post deploy)
+- covers those small differences during dev enviroment vs production
 
-- Postgres hosted on elephantsql.
+---
 
-- Node+express hosted on render.
+## app info
+
+- not a resfult app
+- server side rendering via ejs
+  <br>
+  <br>
+- deploy a postgres prisma express web service on render
+- Postgres db hosted on elephantsql.
+
+---
+
+## tech
+
+- node
+- express
+- prisma (postgres)
+- typescript
+- ejs templating
 
 practice app: https://github.com/Michaelleojacob/testing-elephantsql
 
-## issues faced while deploying to the practice app to render:
+---
 
-### compiling ts
+## issues faced while deploying to the practice app to render:
 
 run command `tsc` in the terminal
 

@@ -5,6 +5,10 @@
 
 source: https://stackoverflow.com/questions/55772477/how-to-implement-validation-in-a-separate-file-using-express-validator
 
+---
+
+## signup controller
+
 ```ts
 // routes/signup.ts
 import validateSignUp from "../../validations/signup";
@@ -22,6 +26,10 @@ signupRouter.post("/", validateSignUp, async (req: Request, res: Response) => {
   return res.status(400).json({ info: `user ${user.username} created` });
 });
 ```
+
+---
+
+## signup validation
 
 ```ts
 // validation/signup.ts
