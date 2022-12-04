@@ -18,11 +18,12 @@
 
 ```js
 import { PrismaClient } from "@prisma/client";
-import express from "express";
+import express, { Request, Response, NextFunction } from "express";
 import path from "path";
 import dotenv from "dotenv";
 import { body, validationResult } from "express-validator";
 import morgan from "morgan";
+import cookieParser from "cookie-parser";
 ```
 
 ---
@@ -35,6 +36,7 @@ const app = express();
 app.use(morgan("short"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 ```
 
 ---
