@@ -4,3 +4,4 @@
 - separated server and app code
 - separated middleware
 - basic routing and http client examples
+- NO db
