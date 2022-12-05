@@ -1,13 +1,30 @@
-file structure:
+## key points
 
-![file structure](../images/ejs-layout-signup.png)
+- file structure for ejs views
+  <br>
+  <br>
+- node boilerplate to use ejs
+- ejs layout
+- using ejs layout in child extentions
 
-ejs node boilerplate:
+---
+
+## file structure:
+
+![file structure](../../images/ejs-layout-signup.png)
+
+---
+
+## ejs node boilerplate:
 
 ```js
 app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "ejs");
 ```
+
+---
+
+## ejs layout
 
 ```js
 // layout.html
@@ -21,6 +38,10 @@ app.set("view engine", "ejs");
   <body></body>
 </html>
 ```
+
+---
+
+## ejs extends layout in child component
 
 ```js
 // signup.ejs

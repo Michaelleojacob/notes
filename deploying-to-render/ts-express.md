@@ -1,20 +1,25 @@
-typescript's `tsc` command will only 'build' `.ts` files.
+## key points
 
-which is fine for a RESTFUL api app.
-
-but if doing server-side rendering the dist file will not be able to see the `/views` file in the root directory.
-
-soltuion:
+- notes for deploying to render.
+- small things have to change from dev to production.
 
 ---
+
+- typescript's `tsc` command will only 'build' `.ts` files.
+
+- which is fine for a RESTFUL api app.
+
+- but if doing server-side rendering the dist file will not be able to see the `/views` file in the root directory.
+
+---
+
+## soltuion
 
 change `app.set("views", path.join(__dirname, "/views"));`
 
 to -> `app.set("views", path.join(__dirname, "../views"));`
 
----
-
-or
+## or
 
 `cp -r` the `/views` folder into `/dist` on build (in render) and keep `app.set("views", path.join(__dirname, "/views"));`
 
