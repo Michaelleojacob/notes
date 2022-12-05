@@ -15,14 +15,12 @@
 const authToken = (req: Request, res: Response, next: NextFunction) => {
     try {
     const token = req.get("token");
-    console.log(token);
 
     if (!token) {
       throw new Error();
     }
 
     const decoded = jwt.verify(token, process.env.SECRET!);
-    console.log(decoded);
     req.token = decoded;
 
     next();
