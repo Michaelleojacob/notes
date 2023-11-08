@@ -1,3 +1,6 @@
+works with either ts or js
+
+```ts
 import { PrismaClient } from "@prisma/client";
 import express from "express";
 const port = process.env.PORT || 3003;
@@ -17,3 +20,4 @@ app.use("/signin", signinRouter);
 app.listen(port, () => {
   console.log(`server running on port ${port}`);
 });
+```
